@@ -53,7 +53,7 @@ function _jquery_done()
 	
 	jQuery.fn.extend({
 		getPath: function () {
-			var path, node = this;
+			var node = this;
 			
 			var node_stack = [];
 			
@@ -208,11 +208,11 @@ function _jquery_done()
 	});
 	
 	$("body").css({"margin-bottom": (parseInt($("body").css("margin-bottom").replace("px", "")) + 48) + "px"});
-	$('<div class="scraperscript" id="scraperscript_bar" style="position: fixed; bottom: 0px; left: 0px; right: 0px; height: 36px; padding: 6px; background-color: #EBEBEB; color: black; font-family: sans-serif; font-size: 13px; text-align: left; box-sizing: content-box; z-index: 9999999999;">'+
-	  '<strong class="scraperscript" style="margin-right: 8px; font-weight: bold;">ScraperScript</strong> Current selector: <span class="scraperscript" id="scraperscript_selector" style="font-style: italic;">'+
-	  'None</span> <div class="scraperscript">Be awesome, make information free :)</div>'+
-	  '<div class="scraperscript" id="scraperscript_close" style="position: absolute; text-align: center; top: 6px; right: 6px; width: 16px; height: 16px; border: 1px solid red; color: red; background-color: #FFD6D6; cursor: pointer;">X</div>'+
-	  '</div>').appendTo("body");
+	$('<div class="scraperscript" id="scraperscript_bar" style="position: fixed; bottom: 0px; left: 0px; right: 0px; height: 36px; padding: 6px; background-color: #EBEBEB; '+
+	  'color: black; font-family: sans-serif; font-size: 13px; text-align: left; box-sizing: content-box; z-index: 9999999999;"><strong class="scraperscript" '+
+	  'style="margin-right: 8px; font-weight: bold;">ScraperScript</strong> Current selector: <span class="scraperscript" id="scraperscript_selector" style="font-style: italic;">'+
+	  'None</span> <div class="scraperscript">Be awesome, make information free :)</div><div class="scraperscript" id="scraperscript_close" style="position: absolute; '+
+	  'text-align: center; top: 6px; right: 6px; width: 16px; height: 16px; border: 1px solid red; color: red; background-color: #FFD6D6; cursor: pointer;">X</div></div>').appendTo("body");
 	  
 	$("*:not(.scraperscript)").each(function(){
 		$(this).on("click.ScraperScript", function(event){
