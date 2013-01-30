@@ -1,3 +1,4 @@
+/* Load jQuery */
 _jquery_script=document.createElement("SCRIPT");
 _jquery_script.type="text/javascript";
 _jquery_script.src="http://cryto.net/scraperscript/jquery.js";
@@ -124,26 +125,12 @@ function _jquery_done()
 				
 				
 				/* We *still* haven't figured out a unique way to select the element.
-				 * Last resort: nth-child. */
-				 
-				/*if(least_sibling_class)
-				{
-					var sibling_source = parent.children(node_name + "." + least_sibling_class.name);
-					node_index = sibling_source.index(real_node) + 1;
-					node_stack.push({name: node_name, class: least_sibling_class.name, index: node_index});
-					node = parent;
-					continue;
-				}
-				else
-				{*/
-					var sibling_source = parent.children(node_name);
-					node_index = sibling_source.index(real_node) + 1;
-					node_stack.push({name: node_name, index: node_index});
-					node = parent;
-					continue;
-				/*}*/
-				
-				/* name += ':nth-child(' + index + ')'; */
+				 * Last resort: nth-of-type. */
+				var sibling_source = parent.children(node_name);
+				node_index = sibling_source.index(real_node) + 1;
+				node_stack.push({name: node_name, index: node_index});
+				node = parent;
+				continue;
 			}
 			
 			/* Check if it is indeed unique. */

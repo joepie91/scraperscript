@@ -8,6 +8,8 @@ A simple bookmarklet that lets you click any element in a page and returns the s
 
 **How to make it stop killing my input:** Just click the X in the ScraperScript bar. ScraperScript will release your input.
 
+**How to develop:** Modify the bookmarklet to point at a scraperscript.js that is hosted locally. It's loaded with a cachebuster, so you can simply use the same bookmarklet every time you change the local code.
+
 Known bugs: 
 
 * On certain kinds of elements (some submit buttons, some elements with click events), ScraperScript can't prevent the attached event from happening. I'm unsure what causes this.
