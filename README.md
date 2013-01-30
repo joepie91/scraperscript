@@ -2,7 +2,7 @@
 
 A simple bookmarklet that lets you click any element in a page and returns the smallest unique (and reliable) selector it can find for that element.
 
-Licensed under the WTFPL.
+Licensed under the WTFPL. A working example can be found at http://cryto.net/scraperscript.
 
 **Usecase:** Figuring out a CSS-style selector for screenscraping.
 
