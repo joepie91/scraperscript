@@ -1,10 +1,31 @@
 <!doctype html>
 <html>
+	<head>
+		<style>
+			.bookmarklet
+			{
+				padding: 5px; 
+				border: 1px solid black; 
+				border-radius: 4px; 
+				background-color: #F5F5F5; 
+				text-decoration: none; 
+				color: black;
+				box-shadow: 3px 3px 7px 0px #000000;
+				-webkit-box-shadow: 3px 3px 7px 0px #000000;
+				-moz-box-shadow: 3px 3px 7px 0px #000000;
+				-o-box-shadow: 3px 3px 7px 0px #000000;
+				-ms-box-shadow: 3px 3px 7px 0px #000000;
+			}
+		</style>
+	</head>
 	<body>
 		<h1>ScraperScript</h1>
 		<p>
 			Extremely experimental. <strong>Drag</strong> the following bookmarklet to your bookmark bar, and click it whenever you want to scrape a page. 
 			It'll let you click any element in the page, and you'll get its unique selector.
+		</p>
+		<p>
+			<a class="bookmarklet" href="javascript:(function(){_scraper_script=document.createElement('SCRIPT');_scraper_script.type='text/javascript';_scraper_script.src='http://cryto.net/scraperscript/scraperscript.js?x='+(Math.random());document.getElementsByTagName('head')[0].appendChild(_scraper_script);})();">Help me scrape!</a>
 		</p>
 		<p>
 			ScraperScript will block input to the page while it's active. To get control over your input again, simply close the ScraperScript bar using
@@ -15,7 +36,7 @@
 			and a link to the page you are trying to work with.
 		</p>
 		<p>
-			<a href="javascript:(function(){_scraper_script=document.createElement('SCRIPT');_scraper_script.type='text/javascript';_scraper_script.src='http://cryto.net/scraperscript/scraperscript.js?x='+(Math.random());document.getElementsByTagName('head')[0].appendChild(_scraper_script);})();">Help me scrape!</a>
+			There's also a <a href="http://github.com/joepie91/scraperscript">repository for this stuff on GitHub</a>.
 		</p>
 	</body>
 </html>
