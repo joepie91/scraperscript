@@ -2,7 +2,20 @@
 <html>
 	<body>
 		<h1>ScraperScript</h1>
-		<p>Extremely experimental. <strong>Drag</strong> the following bookmarklet to your bookmark bar, and click it whenever you want to scrape a page. It'll let you click any element in the page, and you'll get its unique selector.</p>
-		<p><a href="javascript:(function(){_scraper_script=document.createElement('SCRIPT');_scraper_script.type='text/javascript';_scraper_script.src='http://cryto.net/scraperscript/scraperscript.js?x='+(Math.random());document.getElementsByTagName('head')[0].appendChild(_scraper_script);})();">Help me scrape!</a></p>
+		<p>
+			Extremely experimental. <strong>Drag</strong> the following bookmarklet to your bookmark bar, and click it whenever you want to scrape a page. 
+			It'll let you click any element in the page, and you'll get its unique selector.
+		</p>
+		<p>
+			ScraperScript will block input to the page while it's active. To get control over your input again, simply close the ScraperScript bar using
+			the X in the top right corner.
+		</p>
+		<p>
+			If things break, send an email to <a href="mailto:scraperscript@cryto.net">scraperscript@cryto.net</a> with a description of what's going wrong,
+			and a link to the page you are trying to work with.
+		</p>
+		<p>
+			<a href="javascript:(function(){_scraper_script=document.createElement('SCRIPT');_scraper_script.type='text/javascript';_scraper_script.src='http://cryto.net/scraperscript/scraperscript.js?x='+(Math.random());document.getElementsByTagName('head')[0].appendChild(_scraper_script);})();">Help me scrape!</a>
+		</p>
 	</body>
 </html>
